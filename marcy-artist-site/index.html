@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcy The Baptist</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    /* Style for the images to cover the entire screen */
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill; 
+      z-index: 1;
+    }
+
+    /* Style for the text overlay image (back.png) */
+    #textOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: fill;
+      z-index: 2;
+    }
+
+    /* Buttons container */
+    .buttons-container {
+      z-index: 3;
+      display: flex;
+      flex-direction: row; /* Space between buttons */
+      margin-bottom: 200px; /* Space between buttons and second row of links */
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      transform: scaleY(3); /* Stretch text vertically */
+      transform-origin: top;
+    }
+
+    button {
+      z-index: 3;
+      height: 5vh;
+      width: 20vw;
+    }
+
+
+    /* Second row of links */
+    .links-container {
+      z-index: 3;
+      display: flex;
+      gap: 20px; /* Space between links */
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+    <img id="textOverlay" src="images/back.png" alt="Marcy Text Overlay"> <!-- Overlay Text -->
+    <img id="marcyImage" src="images/marcy1.jpeg" alt="Marcy Image"> <!-- Background Image -->
+
+    <div class="buttons-container">
+      <a href="https://www.ninaprotocol.com/hubs/himera" target="_blank">
+        <button>nina</button>
+      </a>
+
+      <a href="https://www.youtube.com/@lartlewaht" target="_blank">
+        <button>youtube</button>
+      </a>
+
+      <a href="https://lartlewaht.bandcamp.com/" target="_blank">
+        <button>bandcamp</button>
+      </a>
+
+      <a href="https://soundcloud.com/alisahiphop" target="_blank">
+        <button>soundcloud</button>
+      </a>
+
+      <a href="https://open.spotify.com/artist/5L5XSoqAzcVfnH9c3i34xb?si=yJzQ83OnRuqKHesBKR2Tog" target="_blank">
+        <button>spotify</button>
+      </a>
+    </div>
+
+    <!-- Second row of links below the buttons -->
+    <div class="links-container">
+      <a href="crazy.html">page2</a>
+      <a href="normal.html">page3</a>
+      <a href="4.html">page4</a>
+    </div>
+
+    <script>
+      const imageCount = 39;
+      let currentIndex = 1;
+
+      document.body.addEventListener('click', () => {
+        currentIndex++;
+        if (currentIndex > imageCount) {
+          currentIndex = 1;  // Loop back to the first image
+        }
+        document.getElementById('marcyImage').src = `images/marcy${currentIndex}.jpeg`;
+      });
+    </script>
+</body>
+</html>
