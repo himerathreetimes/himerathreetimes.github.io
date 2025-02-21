@@ -149,63 +149,7 @@
 
 
 
-    <div class="content">
-        <h1 id="bouncing-text">MARCY</h1>
-    </div>
-
-    
-
-
-    <script>
-        let x = 100, y = 100, dirX = 1, dirY = 1;
-        const speed = 2;
-        const h1 = document.getElementById("bouncing-text");
-        const pallete = ["white", "black", "red"];
-        let prevColorChoiceIndex = 0;
-
-        function getNewRandomColor() {
-            const currentPallete = [...pallete];
-            currentPallete.splice(prevColorChoiceIndex, 1);
-            const colorChoiceIndex = Math.floor(Math.random() * currentPallete.length);
-            prevColorChoiceIndex = colorChoiceIndex < prevColorChoiceIndex ? colorChoiceIndex : colorChoiceIndex + 1;
-            return currentPallete[colorChoiceIndex];
-        }
-
-        function animate() {
-            const screenHeight = window.innerHeight;
-            const screenWidth = window.innerWidth;
-            
-            // Get the exact bounding box of the h1 element
-            const textRect = h1.getBoundingClientRect();
-            
-            const textWidth = textRect.width;
-            const textHeight = textRect.height;
-            const textLeft = textRect.left;
-            const textTop = textRect.top;
-
-            // Reverse direction when text hits the screen edges
-            if (textTop + textHeight >= screenHeight || textTop <= 0) {
-                dirY *= -1;
-                h1.style.color = getNewRandomColor();
-            }
-            if (textLeft + textWidth >= screenWidth || textLeft <= 0) {
-                dirX *= -1;
-                h1.style.color = getNewRandomColor();
-            }
-
-            // Move the text
-            x += dirX * speed;
-            y += dirY * speed;
-
-            // Apply the updated position to the text
-            h1.style.transform = `translate(${x}px, ${y}px)`;
-
-            // Request the next frame
-            window.requestAnimationFrame(animate);
-        }
-
-        // Start animation
-        window.requestAnimationFrame(animate);
+ 
     </script>
 </body>
 </html>
