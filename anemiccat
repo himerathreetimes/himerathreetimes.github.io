@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>marcy the baptist</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>country music</title>
+  <style>
+    body {
+      background-image: url('https://i1.sndcdn.com/artworks-sSnfTPQvnnXMythz-7MWang-t1080x1080.png');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 15 px;
+      font-family: Arial, sans-serif;
+    }
+    .links {
+      text-align: center;
+    }
+
+  </style>
+</head>
+<h1> <a href="https://youtu.be/nZx-S5DEwNk" target="_blank"><i>i</i> <a href="https://www.ninaprotocol.com/releases/country-music" target="_blank"><i>like</i><a href="https://soundcloud.com/alisahiphop/sets/onlyanemiccatiknow?si=69fdb6c42d6f4b4f8ad69b4b55c63be7&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank">you</a> <a href="https://lartlewaht.bandcamp.com/album/country-music" target="_blank"><i>mcat</i></h1>
+<body>
+<img class="video-background" src="output.gif" alt="Background animation">
+</body>
+</html>
