@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sideways Image Animation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden; /* prevents scrollbars */
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: -150px; /* start off-screen */
+      transform: translateY(-50%);
+      animation: moveSideways 5s linear infinite;
+    }
+
+    @keyframes moveSideways {
+      from {
+        left: -150px;
+      }
+      to {
+        left: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="https://github.com/himerathreetimes/himerathreetimes.github.io/blob/main/images/D3.png?raw=true" alt="Moving image" width="150">
+
+</body>
+</html>
